@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import type { ButtonProps } from "../types/ButtonProps";
 
-const Button = ({ children, type = "button", to, className }: ButtonProps) => {
+const Button = ({ children, type = "button", to, className, onClick }: ButtonProps) => {
   if (to) {
     return (
       <Link to={to} className={className}>
@@ -11,7 +11,7 @@ const Button = ({ children, type = "button", to, className }: ButtonProps) => {
   }
 
   return (
-    <button type={type} className={className}>
+    <button onClick={onClick} type={type} className={className}>
       {children}
     </button>
   );
