@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { ButtonProps } from "../types/ButtonProps";
+import type { ButtonProps } from "../../types/ButtonProps";
 
 const Button = ({ children, type = "button", to, className, onClick }: ButtonProps) => {
   if (to) {
