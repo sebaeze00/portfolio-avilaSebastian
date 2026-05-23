@@ -1,11 +1,12 @@
 import Text from "../components/ui/Text";
-import { motion } from "framer-motion";
 import {
   AboutMeText,
   AppContentText,
   AppText,
 } from "../transations/GlobalTexts";
 import { useLanguage } from "../context/LanguageContext";
+import Card from "../components/ui/Card";
+import AnimatedSection from "../components/ui/AnimatedSection";
 
 const AboutMe = () => {
   const { language } = useLanguage();
@@ -15,12 +16,8 @@ const AboutMe = () => {
       <section className="py-12">
         <div className="container-custom grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
           {/* Left */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
+
+          <AnimatedSection initialX={-40}>
             <Text as="p" className="accent font-semibold mb-2">
               {AboutMeText[language].title}
             </Text>
@@ -32,80 +29,34 @@ const AboutMe = () => {
             <Text as="p" className="text-secondary leading-8">
               {AboutMeText[language].myExp}
             </Text>
-          </motion.div>
+          </AnimatedSection>
 
           {/* Right */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+
+          <AnimatedSection
             className="grid grid-cols-1 xl:grid-cols-2 gap-4"
+            initialX={40}
           >
-            <div className="card">
-              <Text
-                as="h3"
-                className="font-bold text-xl sm:text-2xl break-words"
-              >
-                {AppText[language].react}
-              </Text>
+            <Card
+              title={AppText[language].react}
+              content={AppContentText[language].react}
+            />
 
-              <Text
-                as="p"
-                className="text-secondary mt-2 text-sm sm:text-base leading-relaxed break-words"
-              >
-                {AppContentText[language].react}
-              </Text>
-            </div>
+            <Card
+              title={AppText[language].typescript}
+              content={AppContentText[language].typescript}
+            />
 
-            <div className="card">
-              <Text
-                as="h3"
-                className="font-bold text-xl sm:text-2xl break-words"
-              >
-                {AppText[language].typescript}
-              </Text>
+            <Card
+              title={AppText[language].tailwind}
+              content={AppContentText[language].tailwind}
+            />
 
-              <Text
-                as="p"
-                className="text-secondary mt-2 text-sm sm:text-base leading-relaxed break-words"
-              >
-                {AppContentText[language].typescript}
-              </Text>
-            </div>
-
-            <div className="card">
-              <Text
-                as="h3"
-                className="font-bold text-xl sm:text-2xl break-words"
-              >
-                {AppText[language].tailwind}
-              </Text>
-
-              <Text
-                as="p"
-                className="text-secondary mt-2 text-sm sm:text-base leading-relaxed break-words"
-              >
-                {AppContentText[language].tailwind}
-              </Text>
-            </div>
-
-            <div className="card">
-              <Text
-                as="h3"
-                className="font-bold text-xl sm:text-2xl break-words"
-              >
-                {AppText[language].backend}
-              </Text>
-
-              <Text
-                as="p"
-                className="text-secondary mt-2 text-sm sm:text-base leading-relaxed break-words"
-              >
-                {AppContentText[language].backend}
-              </Text>
-            </div>
-          </motion.div>
+            <Card
+              title={AppText[language].backend}
+              content={AppContentText[language].backend}
+            />
+          </AnimatedSection>
         </div>
       </section>
     </>
