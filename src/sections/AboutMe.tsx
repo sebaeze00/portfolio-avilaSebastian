@@ -1,8 +1,6 @@
 import Text from "../components/ui/Text";
 import {
-  AboutMeText,
-  AppContentText,
-  AppText,
+  AboutMeSectionText,
 } from "../transations/GlobalTexts";
 import { useLanguage } from "../context/LanguageContext";
 import Card from "../components/ui/Card";
@@ -19,15 +17,15 @@ const AboutMe = () => {
 
           <AnimatedSection initialX={-40}>
             <Text as="p" className="accent font-semibold mb-2">
-              {AboutMeText[language].title}
+              {AboutMeSectionText[language].aboutMe}
             </Text>
 
             <Text as="h2" className="sm:text-4xl text-2xl font-bold mb-6">
-              {AboutMeText[language].myWork}
+              {AboutMeSectionText[language].description}
             </Text>
 
             <Text as="p" className="text-secondary leading-8">
-              {AboutMeText[language].myExp}
+              {AboutMeSectionText[language].myExp}
             </Text>
           </AnimatedSection>
 
@@ -38,23 +36,23 @@ const AboutMe = () => {
             initialX={40}
           >
             <Card
-              title={AppText[language].react}
-              content={AppContentText[language].react}
+              title={AboutMeSectionText[language].react}
+              content={AboutMeSectionText[language].reactDescription}
             />
 
             <Card
-              title={AppText[language].typescript}
-              content={AppContentText[language].typescript}
+              title={AboutMeSectionText[language].typescript}
+              content={AboutMeSectionText[language].typescriptDescription}
             />
 
             <Card
-              title={AppText[language].tailwind}
-              content={AppContentText[language].tailwind}
+              title={AboutMeSectionText[language].tailwind}
+              content={AboutMeSectionText[language].tailwindDescription}
             />
 
             <Card
-              title={AppText[language].backend}
-              content={AppContentText[language].backend}
+              title={AboutMeSectionText[language].backend}
+              content={AboutMeSectionText[language].backendDescription}
             />
           </AnimatedSection>
         </div>
