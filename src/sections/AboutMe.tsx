@@ -1,10 +1,9 @@
 import Text from "../components/ui/Text";
-import {
-  AboutMeSectionText,
-} from "../transations/GlobalTexts";
+import { AboutMeSectionText } from "../transations/GlobalTexts";
 import { useLanguage } from "../context/LanguageContext";
 import Card from "../components/ui/Card";
 import AnimatedSection from "../components/ui/AnimatedSection";
+import Divisor from "../components/ui/Divisor";
 
 const AboutMe = () => {
   const { language } = useLanguage();
@@ -56,6 +55,9 @@ const AboutMe = () => {
             />
           </AnimatedSection>
         </div>
+
+        <Divisor title="... " />
+
       </section>
     </>
   );
