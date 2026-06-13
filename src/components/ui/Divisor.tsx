@@ -11,7 +11,7 @@ const Divisor = ({ title }: typeDivisor) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="mb-6 flex items-center gap-3"
+      className="mb-6 mt-6 flex items-center gap-3"
     >
       <span
         className="h-px flex-1"
