@@ -64,8 +64,8 @@ const ProjectPage = () => {
         );
       })}
 
-      <AnimatedSection className="mt-6 mb-8" initialX={40}>
-        <Button to="/" className="button-primary mt-6">
+      <AnimatedSection className="mt-6 mb-8 flex justify-center " initialX={40}>
+        <Button to="/" className="button-primary mt-6 ">
           {TitleProject[language].button}
         </Button>
       </AnimatedSection>
