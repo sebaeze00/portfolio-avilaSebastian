@@ -27,13 +27,23 @@ export const HeroSecitonText = {
 
 // Button
 
-export const ButtonTexts = {
+export const ButtonProjects = {
   es: {
     viewProject: "Ver proyectos",
   },
 
   en: {
     viewProject: "View projects",
+  },
+};
+
+export const ButtonPractice = {
+  es: {
+    viewPractice: "Ver practicas",
+  },
+
+  en: {
+    viewPractice: "View practice",
   },
 };
 

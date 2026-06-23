@@ -53,3 +53,13 @@ section {
   background: var(--accent-hover);
   cursor: pointer;
 }
+
+.content-button {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    gap: 15px;
+  }
+}

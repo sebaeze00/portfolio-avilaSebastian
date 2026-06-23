@@ -1,6 +1,10 @@
 import Text from "../components/ui/Text";
 import { useLanguage } from "../context/LanguageContext";
-import { ButtonTexts, HeroSecitonText } from "../transations/GlobalTexts";
+import {
+  ButtonProjects,
+  ButtonPractice,
+  HeroSecitonText,
+} from "../transations/GlobalTexts";
 import Button from "../components/ui/Button";
 import AnimatedSection from "../components/ui/AnimatedSection";
 
@@ -24,11 +28,19 @@ const Hero = () => {
           </Text>
         </AnimatedSection>
 
-        <AnimatedSection className="mt-6" initialX={40}>
-          <Button to="/projects" className="button-primary mt-6">
-            {ButtonTexts[language].viewProject}
-          </Button>
-        </AnimatedSection>
+        <div className="content-button">
+          <AnimatedSection className="mt-6" initialX={40}>
+            <Button to="/practice" className="button-primary mt-6">
+              {ButtonPractice[language].viewPractice}
+            </Button>
+          </AnimatedSection>
+
+          <AnimatedSection className="mt-6" initialX={40}>
+            <Button to="/projects" className="button-primary mt-6">
+              {ButtonProjects[language].viewProject}
+            </Button>
+          </AnimatedSection>
+        </div>
       </div>
     </section>
   );
