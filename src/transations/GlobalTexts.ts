@@ -178,3 +178,29 @@ export const ArbustaProjectText: Record<
     },
   },
 };
+
+//Section Practice
+
+export const PracticeText = {
+  es: {
+    title: "Practica de componentes",
+  },
+
+  en: {
+    title: "Component Development Practice",
+  },
+};
+
+export const PracticeSearch = {
+  es: {
+    title: "Buscador de usuarios",
+    buttonClean: "Limpiar búsqueda",
+    inputText: "Buscar usuario",
+  },
+
+  en: {
+    title: "User Search",
+    buttonClean: "Clear Search",
+    inputText: "Search users",
+  },
+};
