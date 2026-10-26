@@ -1,11 +1,9 @@
 import SearchUsers from "../components/practice/SearchUsers";
 import AnimatedSection from "../components/ui/AnimatedSection";
 import Button from "../components/ui/Button";
-import Divisor from "../components/ui/Divisor";
 import Text from "../components/ui/Text";
 import { useLanguage } from "../context/LanguageContext";
 import {
-  PracticeSearch,
   PracticeText,
   TitleProject,
 } from "../transations/GlobalTexts";
